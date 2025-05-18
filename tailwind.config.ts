@@ -121,6 +121,14 @@ export default {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'50%': { transform: 'scale(1.05)' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'float-particle': {
+					'0%, 100%': { transform: 'translateY(0) scale(1)' },
+					'50%': { transform: 'translateY(-15px) scale(1.1)' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -134,7 +142,9 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-in',
 				'rotate-center': 'rotate-center 8s linear infinite',
 				'scale-in': 'scale-in 0.3s ease-out',
-				'pop': 'pop 0.3s ease-out forwards'
+				'pop': 'pop 0.3s ease-out forwards',
+				'float-particle': 'float-particle 6s infinite ease-in-out',
+				'spin-slow': 'spin-slow 15s linear infinite'
 			}
 		}
 	},

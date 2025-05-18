@@ -1,11 +1,21 @@
 
+import { useState } from 'react';
 import { useMood } from '@/context/MoodContext';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
+import { Share } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import MoodCard from '@/components/MoodCard';
 
 export default function MoodTimeline() {
   const { getAllMoods } = useMood();
   const moods = getAllMoods();
+  const [showMoodCard, setShowMoodCard] = useState(false);
+  const [selectedMood, setSelectedMood] = useState<{
+    mood: any,
+    note?: string,
+    date: string
+  } | null>(null);
   
   const moodEmoji = {
     great: '😄',
@@ -24,6 +34,15 @@ export default function MoodTimeline() {
       terrible: 'mood-gradient-terrible',
     };
     return gradientMap[mood];
+  };
+  
+  const handleShareClick = (entry: any) => {
+    setSelectedMood({
+      mood: entry.mood,
+      note: entry.note,
+      date: format(new Date(entry.date), 'MMMM d, yyyy')
+    });
+    setShowMoodCard(true);
   };
   
   if (moods.length === 0) {
@@ -103,6 +122,18 @@ export default function MoodTimeline() {
                         {entry.note}
                       </p>
                     )}
+                    
+                    <div className="flex justify-end mt-2">
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="text-xs flex items-center gap-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                        onClick={() => handleShareClick(entry)}
+                      >
+                        <Share className="h-3 w-3" /> 
+                        Share Mood Card
+                      </Button>
+                    </div>
                   </div>
                 </div>
               );
@@ -110,6 +141,15 @@ export default function MoodTimeline() {
           </div>
         </div>
       ))}
+      
+      {showMoodCard && selectedMood && (
+        <MoodCard 
+          mood={selectedMood.mood}
+          note={selectedMood.note}
+          date={selectedMood.date}
+          onClose={() => setShowMoodCard(false)}
+        />
+      )}
     </div>
   );
 }
