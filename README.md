@@ -1,51 +1,109 @@
-# Welcome to your project
+# 🎵 MoodMuse - Your Personal Music Mood Companion
 
-## Project info
+MoodMuse is a modern web application that helps you discover and organize music based on your mood. Built with cutting-edge technologies and a focus on user experience, MoodMuse provides an intuitive interface for music lovers to curate their perfect playlist for any emotional state.
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- 🎨 Beautiful, responsive UI with dark/light mode support
+- 🎯 Mood-based music recommendations
+- 📱 Mobile-first design
+- 🔍 Advanced search and filtering capabilities
+- 💾 Local storage for user preferences
+- 🎵 Playlist management
+- 🌈 Intuitive mood tracking
+- 🔄 Real-time updates
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend Framework:** React 18 with TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS with custom animations
+- **UI Components:** Radix UI primitives
+- **State Management:** React Query
+- **Form Handling:** React Hook Form with Zod validation
+- **Routing:** React Router DOM
+- **Charts:** Recharts
+- **Date Handling:** date-fns
+- **Icons:** Lucide React
+- **Notifications:** Sonner
+- **Development:** ESLint, TypeScript, SWC
 
-Follow these steps:
+## 🚀 Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Node.js >= 18.0.0
+- npm or yarn or bun
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Installation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/moodmuse.git
+   cd moodmuse
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   bun install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   bun dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## 🏗️ Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── context/       # React context providers
+├── hooks/         # Custom React hooks
+├── lib/           # Utility functions and configurations
+└── main.tsx       # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+## 🧪 Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-**Use GitHub Codespaces**
+## 🎨 UI/UX Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Responsive design that works on all devices
+- Smooth animations and transitions
+- Accessible components following WCAG guidelines
+- Dark/Light mode support
+- Modern, clean interface
 
-## What technologies are used for this project?
+## 🤝 Contributing
 
-This project is built with:
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- Built for the CodeCircuit Hackathon
+- Special thanks to the Outlier AI team for organizing this amazing event
+- Inspired by the need for better music organization based on mood
+
+---
+
+Made with ❤️ by [Your Name] for CodeCircuit Hackathon
