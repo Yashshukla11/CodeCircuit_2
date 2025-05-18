@@ -40,7 +40,7 @@ export default function MoodNote({ selectedMood, onSave }: MoodNoteProps) {
       'Any bright spots?',
     ],
     bad: [
-      'What's bringing you down?',
+      'What\'s bringing you down?',
       'How can tomorrow be better?',
       'What would help right now?',
     ],
